@@ -20,7 +20,7 @@ class Song(models.Model):
     ]
     genre = models.CharField(
         max_length=100, choices=GENRE_CHOICES, default='', blank=True)
-    audio = models.FileField(upload_to='api/songs/')
+    audio = models.CharField(max_length=100, blank=True)
     image = models.CharField(
         max_length=100, default='https://i.imgur.com/D3aOVsJ.png', blank=True)
     price = models.DecimalField(
